@@ -1,5 +1,7 @@
 // User Controllers
 const { User } = require('../models');
+const Thought = require('../models/Thought');
+const { db } = require('../models/User');
 
 const userController = {
     // User methods
@@ -77,7 +79,27 @@ const userController = {
                     res.status(404).json({ message: 'No user found with this id.' });
                     return;
                 }
-                res.json(dbUserData);
+                return dbUserData;
+            })
+            .then(dbUserData => {
+                User.updateMany(
+                    { _id: { $in: dbUserData.friends } },
+                    { $pull: { friends: params.userId } }
+                )
+                .then(()=> {
+                    Thought.deleteMany({ username: dbUserData.username })
+                    .then(() => {
+                        res.json({message: 'Successfully deleted user'});
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.status(400).json(err);
+                    })
+                })
+                .catch(err => {
+                    console.log(err);
+                    res.status(400).json(err);
+                })
             })
             .catch(err => {
                 console.log(err);
