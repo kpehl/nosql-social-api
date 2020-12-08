@@ -25,11 +25,10 @@ const UserSchema = new Schema(
               },
         },
         thoughts: [
-            // Uncomment when thought model is created
-            // {
-            //     type: Schema.Types.ObjectId,
-            //     ref: 'Thoughts'
-            // }
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thought'
+            }
         ],
         friends: [
             {
