@@ -1,6 +1,5 @@
 // Thought Controllers
 const { Thought, User } = require('../models');
-const { param } = require('../routes');
 
 const thoughtController = {
     // Thought methods
