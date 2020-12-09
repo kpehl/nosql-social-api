@@ -1,9 +1,9 @@
 # NoSQL Social API
 
-  ![GitHub](https://img.shields.io/github/license/kpehl/pizza-hunt?style=plastic)
+  ![GitHub](https://img.shields.io/github/license/kpehl/nosql-social-api?style=plastic)
   
-  ![Most recent commit](https://img.shields.io/github/last-commit/kpehl/pizza-hunt)
-  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kpehl/pizza-hunt)
+  ![Most recent commit](https://img.shields.io/github/last-commit/kpehl/nosql-social-api)
+  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kpehl/nosql-social-api)
 
 
 ## Project Description
